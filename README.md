@@ -47,8 +47,16 @@ Start the VM
 
 	$ composer install
 
-
 You can now access your project at [http://projectname.local](http://projectname.local)
+
+You can access remotely the mysql using for example sequelpro
+
+![Screenshot of up-and-running mysql-server](http://screencast.com/t/IvA1iUaqml)
+
+
+## Optional configuration
+
+If you want to change the projectname for your browser access, just change on the vagrantfile. There you can change the password for the mysql as well
 
 ## Installed software
 * Apache 2

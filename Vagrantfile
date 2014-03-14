@@ -12,7 +12,7 @@
 ip_address = "172.22.22.22"
 
 # The project name is base for directories, hostname and alike
-project_name = "project"
+project_name = "projectname"
 
 # MySQL and PostgreSQL password - feel free to change it to something
 # more secure
