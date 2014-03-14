@@ -16,7 +16,7 @@ project_name = "project"
 
 # MySQL and PostgreSQL password - feel free to change it to something
 # more secure
-database_password = "laravel"
+database_password = "root"
 
 # Vagrant configuration
 # -------------------------
