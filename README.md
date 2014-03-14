@@ -47,11 +47,13 @@ Start the VM
 
 	$ composer install
 
+You will be able to run on your current folder without doing `vagrant ssh` 
+
 You can now access your project at [http://projectname.local](http://projectname.local)
 
 You can access remotely the mysql using for example sequelpro
 
-![Screenshot of up-and-running mysql-server](http://screencast.com/t/IvA1iUaqml)
+![Screenshot of up-and-running mysql-server](http://content.screencast.com/users/davidkruger/folders/Jing/media/2e152cd2-8cf0-49f1-b1fd-e39482694d01/00000087.png)
 
 
 ## Optional configuration
