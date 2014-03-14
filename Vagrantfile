@@ -57,8 +57,6 @@ Vagrant.configure("2") do |config|
         chef.add_recipe "laravel::web_server"
         chef.add_recipe "laravel::vhost"
         chef.add_recipe "memcached"
-        chef.add_recipe "redisio::install"
-        chef.add_recipe "redisio::enable"
         chef.add_recipe "laravel::db"
         chef.add_recipe "postgresql::server"
         chef.add_recipe "postfix"
@@ -120,6 +118,23 @@ Vagrant.configure("2") do |config|
                 :server_debian_password  => database_password,
                 :bind_address            => ip_address,
                 :allow_remote_root       => true
+            },
+            :postgresql => {
+                :users => [{
+                    :username            => "root",
+                    :password            => database_password,
+                    :superuser           => true,
+                    :createdb            => true,
+                    :login               => true
+                }],
+                :listen_addresses        => "*",
+                :pg_hba => [ # Make sure we have remote access
+                    { :type => "local", :db => "all", :user => "postgres", :addr => "",             :method => "peer" },
+                    { :type => "local", :db => "all", :user => "all",      :addr => "",             :method => "peer" },
+                    { :type => "host",  :db => "all", :user => "all",      :addr => "127.0.0.1/32", :method => "md5" },
+                    { :type => "host",  :db => "all", :user => "all",      :addr => "::1/128",      :method => "md5" },
+                    { :type => "host",  :db => "all", :user => "all",      :addr => "0.0.0.0/0",    :method => "md5" }
+                ]
             }
         }
     end

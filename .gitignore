@@ -1,0 +1,15 @@
+# Ignore Vagrant files
+
+.vagrant
+Berksfile.lock
+
+# Ignore Laravel files
+
+/bootstrap/compiled.php
+/vendor
+composer.phar
+composer.lock
+.env.local.php
+.env.php
+.DS_Store
+Thumbs.db
