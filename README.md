@@ -43,6 +43,11 @@ Start the VM
 	$ cd project-folder
 	$ vagrant up
 
+## Laravel Install
+
+	$ composer install
+
+
 You can now access your project at [http://projectname.local](http://projectname.local)
 
 ## Installed software
